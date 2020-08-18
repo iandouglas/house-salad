@@ -1,0 +1,21 @@
+<h2>Here is your <%= @members.count %>  </h2>
+
+<% @members.each do |member| %>
+  <div class="member">
+      <p class="name">
+        <%= member.name %>
+      </p>
+
+      <p class="role">
+        <%= member.role %>
+      </p>
+
+      <p class="party">
+        <%= member.party %>
+      </p>
+
+      <p class="district">
+        <%= memebr.district %>
+      </p>
+  </div>
+<% end %>

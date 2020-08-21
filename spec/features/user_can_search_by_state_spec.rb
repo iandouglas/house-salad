@@ -11,23 +11,23 @@ describe 'user can search for house members' do
     expect(page).to have_content('7 Results')
     expect(page).to have_css('.member', count: 7)
 
-    within(first:('.member')) do
+    within(first('.member')) do
       expect(page).to have_css('.name')
-      name = find('.name').value
+      name = find('.name').text
       expect(name).not_to be_empty
 
       expect(page).to have_css('.role')
-      role = find('.role').value
+      role = find('.role').text
       expect(role).not_to be_empty
 
 
       expect(page).to have_css('.party')
-      party = find('.party').value
+      party = find('.party').text
       expect(party).not_to be_empty
 
       expect(page).to have_css('.district')
-      district = find('.district').value
-      expect(distrtict).not_to be_empty
+      district = find('.district').text
+      expect(district).not_to be_empty
     end
   end
 end

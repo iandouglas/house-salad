@@ -1,4 +1,4 @@
-<h2>Here is your <%= @members.count %>  </h2>
+<h2>Here is your <%= @members.length %> Results </h2>
 
 <% @members.each do |member| %>
   <div class="member">
@@ -15,7 +15,7 @@
       </p>
 
       <p class="district">
-        <%= memebr.district %>
+        <%= member.district %>
       </p>
   </div>
 <% end %>
